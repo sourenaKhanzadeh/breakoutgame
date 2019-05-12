@@ -1,5 +1,5 @@
 from abc import abstractmethod, ABC
-from breakoutgame.setting import *
+from setting import *
 
 
 class Shape(ABC):

@@ -1,5 +1,5 @@
-from breakoutgame.Res.Prefabs.GameObjects.player import Paddle, Ball
-from breakoutgame.setting import *
+from Res.Prefabs.GameObjects.player import Paddle, Ball
+from setting import *
 
 # create the scene environment
 scene = []

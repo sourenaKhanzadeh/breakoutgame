@@ -1,4 +1,4 @@
-from breakoutgame.Res.Prefabs.GameObjects.shapes import Rectangle, Circle
+from Res.Prefabs.GameObjects.shapes import Rectangle, Circle
 
 class Paddle(Rectangle):
     pass

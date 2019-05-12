@@ -1,6 +1,6 @@
 import pygame
-import breakoutgame.Res.Constants.color as CC
-import breakoutgame.Res.Constants.physics as PS
+import Res.Constants.color as CC
+import Res.Constants.physics as PS
 
 
 # WINDOW CONFIGURATION
