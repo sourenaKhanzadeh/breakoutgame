@@ -1,6 +1,6 @@
-from Res.Prefabs.GameObjects.shapes import Rectangle, Circle
+from Res.Prefabs.GameObjects.shapes import rectangle, Circle
 
-class Paddle(Rectangle):
+class Paddle(rectangle):
     pass
 
 
