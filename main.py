@@ -1,4 +1,3 @@
-from Res.Prefabs.GameObjects.player import *
 from setting import *
 
 # create the scene environment

@@ -1,10 +1,6 @@
 from Prefabs.GameObjects.shapes.shapes import *
 from setting import *
 
-class Paddle(Rectangle):
-    pass
-
-
 class Ball(Circle):
 
     def move(self):
@@ -26,7 +22,9 @@ class Ball(Circle):
         self.decY(self.dy)
 
 
-    def collision(self, col:Rectangle):
-        if self.getY() - self.getRad() > col.getY()  and col.getX()  == self.getX() + col.getW():
+    def collision(self, col:Shape):
+        # very simple ball collision logic
+        if self.getY() - self.dy == col.getY()  and \
+                                col.getX() <= self.getX() <= col.getX() + col.getW():
             self.dy = -self.dy
 

@@ -15,3 +15,7 @@ def setWindow(title):
 
 # set the window
 screen = setWindow("Break Out Game")
+
+
+from Res.Prefabs.GameObjects.player.player import *
+from Res.Prefabs.GameObjects.player.ball import *
