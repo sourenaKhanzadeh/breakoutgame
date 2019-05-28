@@ -5,13 +5,16 @@ scene = []
 
 
 def collisions():
-    scene[0].collision(scene[1])
+    # ball collisions
+    for colliders in range(1, len(scene)):
+        scene[0].collision(scene[colliders])
 
 def initializeScene():
     """
     """
     scene.append(Ball(y=100))
     scene.append(Paddle(w=50))
+    scene.append(Brick(y=200, w=50))
 
 
 

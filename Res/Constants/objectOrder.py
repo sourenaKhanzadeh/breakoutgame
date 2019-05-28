@@ -1,0 +1,4 @@
+BALL = 1
+PADDLE = 2
+BRICKS = 3
+

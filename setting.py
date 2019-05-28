@@ -1,6 +1,7 @@
 import pygame
 import Res.Constants.color as CC
 import Res.Constants.physics as PS
+import Res.Constants.objectOrder as OO
 
 
 # WINDOW CONFIGURATION
@@ -17,5 +18,6 @@ def setWindow(title):
 screen = setWindow("Break Out Game")
 
 
-from Res.Prefabs.GameObjects.player.player import *
-from Res.Prefabs.GameObjects.player.ball import *
+from Res.Prefabs.GameObjects.player.player import Paddle
+from Res.Prefabs.GameObjects.player.ball import Ball
+from Res.Prefabs.GameObjects.bricks.bricks import Brick

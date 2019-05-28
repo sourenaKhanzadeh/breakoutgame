@@ -1,4 +1,5 @@
 from Prefabs.GameObjects.shapes.shapes import *
+from Prefabs.GameObjects.bricks.bricks import Brick
 from setting import *
 
 class Ball(Circle):
@@ -28,3 +29,10 @@ class Ball(Circle):
                                 col.getX() <= self.getX() <= col.getX() + col.getW():
             self.dy = -self.dy
 
+            # if the collided is a brick then change the hit number of the brick
+            if len(col) == OO.BRICKS:
+                col.hits -= 1
+
+
+    def __len__(self):
+        return OO.BALL

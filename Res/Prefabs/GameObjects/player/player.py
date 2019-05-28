@@ -1,5 +1,4 @@
 from Prefabs.GameObjects.shapes.shapes import *
-from setting import *
 
 class Paddle(Rectangle):
 
@@ -69,3 +68,7 @@ class Paddle(Rectangle):
 
 
         return flag
+
+
+    def __len__(self):
+        return OO.PADDLE
