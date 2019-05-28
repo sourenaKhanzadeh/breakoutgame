@@ -75,3 +75,7 @@ class Shape(ABC):
     def getWidth(self):
         return self._width
 
+
+#import all shapes
+from Prefabs.GameObjects.shapes.rectangle import Rectangle
+from Prefabs.GameObjects.shapes.circle import Circle

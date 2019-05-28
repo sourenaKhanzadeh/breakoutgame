@@ -26,30 +26,7 @@ class Circle(Shape):
     def move(self):
         """
         """
-        # if Circle has not hit the right screen
-        if self.getRad() + self.getX() >= WIDTH:
-            # change the x velocity
-            # push it a little
-            self.dx = -self.dx
-            self.decX(self.dx)
-
-        # if Circle has not hit the left screen
-        elif self.getX() - self.getRad() <= 0:
-            #change the x velocity
-            # push it a little
-            self.dx = -self.dx
-            self.incX(self.dx)
-        # if Circle has hit the up screen
-        elif self.getY() - self.getRad() <= 0:
-            self.dy = -self.dy
-            self.decY(self.dy)
-
-        if self.isMovable():
-            # shoot ball
-            self.decY(self.dy)
-            # elif flag[1]:
-            #     self.decY(self.dy)
-
+        super().move()
 
 
 

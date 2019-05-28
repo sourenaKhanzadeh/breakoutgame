@@ -1,14 +1,19 @@
-from Res.Prefabs.GameObjects.player import Paddle, Ball
+from Res.Prefabs.GameObjects.player import *
 from setting import *
 
 # create the scene environment
 scene = []
 
+
+def collisions():
+    scene[0].collision(scene[1])
+
 def initializeScene():
     """
     """
+    scene.append(Ball(y=100))
     scene.append(Paddle(w=50))
-    scene.append(Ball())
+
 
 
 initializeScene()
@@ -29,6 +34,9 @@ run = True
 
 # While game is running
 while run:
+    # delay the game a bit
+    pygame.time.delay(PS.DEFAULT_TIME_DELAY)
+
     # get all PyGame events
     for event in pygame.event.get():
         # if pressed on quit
@@ -38,6 +46,8 @@ while run:
 
     # fill the window color
     screen.fill(CC.white)
+    # collisions
+    collisions()
     # update window
     updateScene()
 
