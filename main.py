@@ -2,7 +2,7 @@ from setting import *
 
 # create the scene environment
 scene = []
-
+brickManager = BrickManagement(scene)
 
 def collisions():
     # ball collisions
@@ -14,7 +14,10 @@ def initializeScene():
     """
     scene.append(Ball(y=100))
     scene.append(Paddle(w=50))
-    scene.append(Brick(y=200, w=50))
+    brickManager.appendScene(1, y=100)
+    brickManager.appendScene(2, y=200)
+    brickManager.appendScene(3, y=300)
+    brickManager.appendScene(4, y=400)
 
 
 
@@ -47,7 +50,7 @@ while run:
             run = False
 
     # fill the window color
-    screen.fill(CC.white)
+    screen.fill(CC.WHITE)
     # collisions
     collisions()
     # update window

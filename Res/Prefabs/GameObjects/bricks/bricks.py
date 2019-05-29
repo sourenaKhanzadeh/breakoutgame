@@ -5,7 +5,7 @@ class Brick(Rectangle):
     """
     Brick
     """
-    def __init__(self, x=WIDTH // 2, y=WIDTH // 2, color=CC.red, width=0, w=10, h=10, hits = 1):
+    def __init__(self, x=WIDTH // 2, y=WIDTH // 2, color=CC.RED, width=0, w=10, h=10, hits = 1):
         super().__init__(x, y, color, width, w, h)
         self._hits = hits
 

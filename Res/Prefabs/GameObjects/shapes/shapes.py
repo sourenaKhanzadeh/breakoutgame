@@ -8,7 +8,7 @@ class Shape(ABC):
     RECTANGLE
     """
     @abstractmethod
-    def __init__(self, x=WIDTH//2, y=WIDTH//2, color=CC.red, width=0):
+    def __init__(self, x=WIDTH//2, y=WIDTH//2, color=CC.RED, width=0):
         self._x = x
         self._y = y
         self._color = color

@@ -3,7 +3,7 @@ from setting import *
 
 class Rectangle(Shape):
 
-    def __init__(self, x=WIDTH // 2, y=WIDTH // 2, color=CC.red, width=0, w=10, h=10):
+    def __init__(self, x=WIDTH // 2, y=WIDTH // 2, color=CC.RED, width=0, w=10, h=10):
         super().__init__(x, y, color, width)
         self._w = w
         self._h = h
