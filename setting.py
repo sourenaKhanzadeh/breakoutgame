@@ -21,3 +21,4 @@ screen = setWindow("Break Out Game")
 from Res.Prefabs.GameObjects.player.player import Paddle
 from Res.Prefabs.GameObjects.player.ball import Ball
 from Res.Prefabs.GameObjects.bricks.manager import BrickManagement
+from Res.Prefabs.GameEnviroment.level.manager import LevelManager

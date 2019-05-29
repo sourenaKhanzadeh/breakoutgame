@@ -38,6 +38,12 @@ class BrickManagement:
         self.scene.append(self.getBrick(brick, x, y))
 
 
+    def __len__(self):
+        """
+        total size of the bricks
+        in the scene
+        """
+        return self.total_bricks
 
     @property
     def total_bricks(self):

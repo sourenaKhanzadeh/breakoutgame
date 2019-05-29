@@ -1,33 +1,13 @@
 from setting import *
 
 # create the scene environment
-scene = []
-brickManager = BrickManagement(scene)
-
-def collisions():
-    # ball collisions
-    for colliders in range(1, len(scene)):
-        scene[0].collision(scene[colliders])
-
-def initializeScene():
-    """
-    """
-    scene.append(Ball(y=100))
-    scene.append(Paddle(w=50))
-    brickManager.appendScene(1, y=100)
-    brickManager.appendScene(2, y=200)
-    brickManager.appendScene(3, y=300)
-    brickManager.appendScene(4, y=400)
-
-
-
-initializeScene()
+levelManager = LevelManager()
 
 def updateScene():
     """
     """
     # get all gameObjects in the scene
-    for gameObject in scene:
+    for gameObject in levelManager.scene:
         # update each
         gameObject.update()
 
@@ -50,9 +30,9 @@ while run:
             run = False
 
     # fill the window color
-    screen.fill(CC.WHITE)
+    screen.fill(CC.BLACK)
     # collisions
-    collisions()
+    levelManager.collisions()
     # update window
     updateScene()
 
