@@ -10,3 +10,5 @@ DEFAULT_TIME_DELAY = 2
 
 # Special values
 VOID = -1
+
+DEFAULT_BRICKS_SIZE = 50

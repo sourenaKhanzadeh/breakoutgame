@@ -65,10 +65,9 @@ class Paddle(Rectangle):
             # move up a bit
             self.decY(self.dy)
 
-
-
         return flag
 
 
     def __len__(self):
         return OO.PADDLE
+

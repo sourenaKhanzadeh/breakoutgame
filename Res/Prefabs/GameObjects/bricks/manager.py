@@ -2,10 +2,9 @@ from Prefabs.GameObjects.bricks.bricks import Brick
 from setting import *
 
 class BrickManagement:
-
+    bricks = []
 
     def __init__(self, scene):
-        self._total_bricks = 0
         self._scene = scene
 
     def types(self, x, y):
@@ -14,10 +13,10 @@ class BrickManagement:
         return all brick types
         """
         return {
-            1:Brick(hits=1, color=CC.YELLOW, w=50, x=x, y=y),
-            2:Brick(hits=2, color=CC.BLUE, w=50, x=x, y=y),
-            3:Brick(hits=3, color=CC.GREEN, w=50, x=x, y=y),
-            4:Brick(hits=4, color=CC.PURPLE, w=50, x=x, y=y),
+            1:Brick(hits=1, color=CC.YELLOW, w=PS.DEFAULT_BRICKS_SIZE, x=x, y=y),
+            2:Brick(hits=2, color=CC.BLUE, w=PS.DEFAULT_BRICKS_SIZE, x=x, y=y),
+            3:Brick(hits=3, color=CC.GREEN, w=PS.DEFAULT_BRICKS_SIZE, x=x, y=y),
+            4:Brick(hits=4, color=CC.PURPLE, w=PS.DEFAULT_BRICKS_SIZE, x=x, y=y),
         }
 
 
@@ -34,24 +33,24 @@ class BrickManagement:
         append the brick to the
         scene
         """
-        self.total_bricks += 1
-        self.scene.append(self.getBrick(brick, x, y))
+        BrickManagement.bricks.append(self.getBrick(brick, x, y))
+        self.scene += BrickManagement.bricks
 
+    # def update(self):
+        # check if brick still exist
+        # for brick in BrickManagement.bricks:
+            # if brick is destroyed then pop out of the list
+            # if brick.destroy():
+            #     BrickManagement.bricks.pop()
+            #     break
 
     def __len__(self):
         """
         total size of the bricks
         in the scene
         """
-        return self.total_bricks
+        return len(BrickManagement.bricks)
 
-    @property
-    def total_bricks(self):
-        return self._total_bricks
-
-    @total_bricks.setter
-    def total_bricks(self, value):
-        self._total_bricks = value
 
     @property
     def scene(self):

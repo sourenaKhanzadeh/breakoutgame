@@ -3,6 +3,8 @@ import Res.Constants.color as CC
 import Res.Constants.physics as PS
 import Res.Constants.objectOrder as OO
 
+# DEBUG CONSTANT
+DEBUG = True
 
 # WINDOW CONFIGURATION
 WIDTH  = 500

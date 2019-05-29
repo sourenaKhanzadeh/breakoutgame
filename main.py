@@ -3,16 +3,6 @@ from setting import *
 # create the scene environment
 levelManager = LevelManager()
 
-def updateScene():
-    """
-    """
-    # get all gameObjects in the scene
-    for gameObject in levelManager.scene:
-        # update each
-        gameObject.update()
-
-    # update the display
-    pygame.display.update()
 
 
 run = True
@@ -34,7 +24,7 @@ while run:
     # collisions
     levelManager.collisions()
     # update window
-    updateScene()
+    levelManager.updateScene()
 
 # quit Out Of PyGame
 pygame.quit()

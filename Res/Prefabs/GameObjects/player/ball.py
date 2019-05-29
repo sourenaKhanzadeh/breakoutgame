@@ -4,6 +4,10 @@ from setting import *
 
 class Ball(Circle):
 
+
+    def __init__(self, x=WIDTH // 2, y=WIDTH // 2, color=CC.RED, width=0, rad=10):
+        super().__init__(x, y, color, width, rad)
+
     def move(self):
 
         # go east if less than WIDTH
@@ -17,10 +21,18 @@ class Ball(Circle):
         if self.getY() + self.getRad() < 0:
             self.dy = -self.dy
 
+        # debug the ball
+        self.debug(DEBUG)
+
         # move x axis
         self.incX(self.dx)
         # move y axis
         self.decY(self.dy)
+
+    def debug(self, active):
+        if active:
+            if self.getY() > HEIGHT:
+                self.setY(0)
 
 
     def collision(self, col:Shape):
